@@ -1,67 +1,112 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+          rel="stylesheet"
+        />
+        <title>rogeriocsilva</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js</a> on Docker!
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
+      <main>
+        <section class="container">
+          <div class="header">
+            <h1 class="header--title">Rogério Silva</h1>
+            <h4 class="header--sub-title">Software engineer @ Revolut</h4>
+          </div>
+        </section>
+        <div className="social">
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://github.com/rogeriocsilva"
             target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
+            rel="noopener"
+            className={"social--link"}
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <Image
+              src="/images/iconmonstr-github-1.svg"
+              alt="github icon"
+              className="social--icon github svg"
+              width={24}
+              height={24}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rogeriocsilva21/"
+            target="_blank"
+            rel="noopener"
+            className="social--link"
+          >
+            <Image
+              src="/images/iconmonstr-linkedin-1.svg"
+              alt="linkedin icon"
+              className="social--icon linkedin svg"
+              width={24}
+              height={24}
+            />
+          </a>
+          <a
+            href="https://twitter.com/_rogeriocsilva"
+            target="_blank"
+            rel="noopener"
+            className="social--link"
+          >
+            <Image
+              src="/images/iconmonstr-twitter-1.svg"
+              alt="twitter icon"
+              className="social--icon twitter svg"
+              width={24}
+              height={24}
+            />
+          </a>
+          <a
+            href="https://open.spotify.com/user/1167029914?si=y_IqceylRiCKC9RuWaoJow"
+            target="_blank"
+            rel="noopener"
+            className="social--link"
+          >
+            <Image
+              src="/images/iconmonstr-spotify-1.svg"
+              alt="spotify icon"
+              className="social--icon spotify svg"
+              width={24}
+              height={24}
+            />
+          </a>
+          <a
+            href="https://www.last.fm/user/rogeriocsilva"
+            target="_blank"
+            rel="noopener"
+            className="social--link"
+          >
+            <Image
+              src="/images/iconmonstr-last-fm-1.svg"
+              alt="lastfm icon"
+              className="social--icon last-fm svg"
+              width={24}
+              height={24}
+            />
+          </a>
+          <a
+            href="https://letterboxd.com/rogeriocsilva/"
+            target="_blank"
+            rel="noopener"
+            className="social--link"
+          >
+            <Image
+              src="/images/letterboxd-decal-dots-pos-mono.svg"
+              alt="letterboxd icon"
+              className="social--icon letterboxd svg"
+              width={24}
+              height={24}
+            />
           </a>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
