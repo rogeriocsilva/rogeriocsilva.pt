@@ -1,0 +1,6 @@
+services:
+  web:
+    build:
+      dockerfile: ./Dockerfile.bun
+    ports:
+      - "4000:3000"
