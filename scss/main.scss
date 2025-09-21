@@ -115,6 +115,10 @@ main {
   min-height: calc(100vh - 3rem);
   width: 100%;
 
+  @include mediaVars.tablet {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
   @include mediaVars.desktop {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -127,11 +131,14 @@ main {
 
 .home {
   margin: auto;
-  grid-column: 2/4;
+  grid-column: 1/5;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
 
+  @include mediaVars.tablet {
+    grid-column: 2/8;
+  }
   @include mediaVars.desktop {
     grid-column: 4/10;
   }
@@ -144,6 +151,15 @@ main {
     font-size: 2rem;
     line-height: 1.25em;
     color: var(--text-color);
+
+    @include mediaVars.tablet {
+      font-size: 2.5rem;
+      line-height: 1.5em;
+    }
+    @include mediaVars.desktop {
+      font-size: 3rem;
+      line-height: 1.5em;
+    }
   }
 
   &--sub-title {
@@ -152,6 +168,11 @@ main {
     color: var(--text-color);
     text-decoration: none;
     margin-top: 0.5rem;
+
+    @include mediaVars.tablet {
+      font-size: 1.5rem;
+      line-height: 1.5em;
+    }
   }
 }
 
@@ -159,6 +180,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-inline: auto;
 
   &--link {
     font-size: 0.875rem;
@@ -169,7 +191,15 @@ main {
     align-items: center;
 
     & + & {
-      margin-left: 1.5rem;
+      margin-left: 1rem;
+
+      @include mediaVars.desktop {
+        margin-left: 1rem;
+      }
+
+      @include mediaVars.large {
+        margin-left: 1.5rem;
+      }
     }
   }
 
@@ -177,6 +207,11 @@ main {
     fill: var(--text-color);
     height: 1.5rem;
     width: 1.5rem;
+
+    @include mediaVars.tablet {
+      height: 2rem;
+      width: 2rem;
+    }
 
     &.letterboxd {
       background-color: black;
