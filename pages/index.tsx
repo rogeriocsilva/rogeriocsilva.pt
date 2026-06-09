@@ -117,7 +117,7 @@ export default function Home() {
                 className="social--link"
               >
                 <img
-                  src="/images/letterboxd-decal-dots-pos-mono.svg"
+                  src="/images/iconmonstr-letterboxd-1.svg"
                   alt="letterboxd icon"
                   className="social--icon letterboxd svg"
                   width={24}
